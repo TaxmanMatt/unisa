@@ -44,10 +44,10 @@ int main()
     bottle1.empty();
 
     cout << "-----Bottle 2 stats-----\n\n";
-    bottle2.setCapacity(500);
+    bottle2.setCapacity(450);
     bottle2.setQuantity(360);
-    cout << "Max capacity: " << bottle1.getCapacity() << "ml" << endl;
-    cout << "Current quantity: " << bottle1.getQuantity() << "ml" << endl;
+    cout << "Max capacity: " << bottle2.getCapacity() << "ml" << endl;
+    cout << "Current quantity: " << bottle2.getQuantity() << "ml" << endl;
     bottle2.fill();
     bottle2.empty();
 
