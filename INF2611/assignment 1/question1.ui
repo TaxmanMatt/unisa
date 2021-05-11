@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>816</width>
+    <width>810</width>
     <height>600</height>
    </rect>
   </property>
@@ -14,12 +14,15 @@
    <string>Dialog</string>
   </property>
   <widget class="QTabWidget" name="tabWidget">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
    <property name="geometry">
     <rect>
      <x>30</x>
      <y>130</y>
      <width>751</width>
-     <height>421</height>
+     <height>461</height>
     </rect>
    </property>
    <property name="currentIndex">
@@ -75,30 +78,102 @@
      </layout>
     </widget>
    </widget>
-   <widget class="QWidget" name="tab_2">
+   <widget class="QWidget" name="tab_4">
     <attribute name="title">
-     <string>Stay Here</string>
+     <string>Events</string>
     </attribute>
+    <widget class="QListWidget" name="listWidget_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>721</width>
+       <height>371</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>THE REUNION BY GEORGINA GRATRIX
+April 13 @ 8:00 am - May 31 @ 5:00 pm
+Norval Foundation, 4 Steenberg Rd, Steenberg Estate
+Cape Town, Western Cape 7945 South Africa
+Price: ZAR120
+
+DRIVE-IN CINEMA AT BOSCHENDAL
+April 13 @ 6:00 pm - May 29 @ 10:30 pm
+Boschendal Wine Estate, R310 Pniel Road Groot Drakenstein
+Franschhoek, Western Cape 7680 South Africa
+Price: ZAR250
+
+WINTER OF WANDER AT DURBANVILLE HILLS
+May 6 @ 7:00 pm - August 12 @ 7:00 pm
+Durbanville Hills Winery, Tygerberg Valley Rd, Cape Farms
+Cape Town, Western Cape 7550 South Africa + Google Map
+Price: ZAR350
+
+THE ALPHEN ANTIQUES AND COLLECTABLES MARKETS
+May 16 @ 10:00 am - 3:00 pm
+Recurring Event (See all)
+The Garrat Memorial Hall, 5 Eskol Lane, Constantia
+Cape Town, Western Cape 7806 South Africa + Google Map
+Price: Free</string>
+      </property>
+     </item>
+    </widget>
    </widget>
    <widget class="QWidget" name="tab_3">
     <attribute name="title">
      <string>Eat Out</string>
     </attribute>
-   </widget>
-   <widget class="QWidget" name="tab_4">
-    <attribute name="title">
-     <string>Events</string>
-    </attribute>
-   </widget>
-   <widget class="QWidget" name="tab_5">
-    <attribute name="title">
-     <string>Nightlife</string>
-    </attribute>
-   </widget>
-   <widget class="QWidget" name="tab_6">
-    <attribute name="title">
-     <string>Contact Us</string>
-    </attribute>
+    <widget class="QListWidget" name="listWidget">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>725</width>
+       <height>391</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>8</pointsize>
+      </font>
+     </property>
+     <item>
+      <property name="text">
+       <string>THE TEST KITCHEN
+Opening times Tuesday – Saturday, 6pm – 8pm
+Contact 021 447 2337, reservations@thetestkitchen.co.za
+Where to find it The Old Biscuit Mill, 375 Albert Road, Woodstock, Cape Town
+
+CHEFS WAREHOUSE
+Opening times Monday – Saturday, 12pm – 2:30pm; 5.30pm – 8.30pm; Sunday, 12pm – 2.30pm
+Contact 021 794 8632, info@chefswarehouse.co.za
+Where to find it Beau Constantia, 1043 Constantia Main Road, Cape Town
+
+SALSIFY
+Opening times Tuesday – Saturday; 12.30pm – 2pm; 6.30pm – 9pm
+Contact 021 010 6444, reservations@salsify.co.za
+Where to find it Roundhouse Road, Camps Bay
+
+THE FOODBARN RESTAURANT
+Opening times Daily, 12pm – 2.30pm; Tuesday – Saturday, 7pm – 9.30pm
+Contact 021 789 1390, info@thefoodbarn.co.za
+Where to find it Noordhoek Farm Village, Corner Village Lane and Noordhoek Main Road, Noordhoek
+
+KYOTO GARDEN JAPANESE RESTAURANT
+Opening times Monday – Saturday, 5.30pm – 11pm
+Contact 021 422 2001, kyotogardensushict.com
+Where to find it 11 Lower Kloof Nek Road, Gardens, Cape Town
+
+THE POTLUCK CLUB
+Opening times Monday – Saturday, 12.30 – 2pm; 6pm – 10pm; Sunday, 11am – 12.30pm
+Contact 021 447 0804, reservations@thepotluckclub.co.za
+Where to find it Silo Top Floor, The Old Biscuit Mill, 373 – 375 Albert Road, Woodstock, Cape Town
+</string>
+      </property>
+     </item>
+    </widget>
    </widget>
   </widget>
   <widget class="QLabel" name="label">
@@ -138,14 +213,14 @@
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>515</x>
+     <x>505</x>
      <y>25</y>
-     <width>241</width>
+     <width>261</width>
      <height>61</height>
     </rect>
    </property>
    <property name="frameShape">
-    <enum>QFrame::Box</enum>
+    <enum>QFrame::NoFrame</enum>
    </property>
    <property name="text">
     <string>Enter your email below and stand a chance to win an all expenses paid for you and a partner to Cape Town for five days!</string>
@@ -161,19 +236,6 @@
    </property>
    <property name="indent">
     <number>5</number>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton_2">
-   <property name="geometry">
-    <rect>
-     <x>700</x>
-     <y>565</y>
-     <width>75</width>
-     <height>23</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Quit</string>
    </property>
   </widget>
  </widget>
