@@ -10,7 +10,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import (QApplication, QWidget, QPushButton, 
 QLineEdit, QInputDialog)
 
-class Ui_Dialog(object):
+class Ui_Dialog(QWidget):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
         Dialog.resize(810, 600)
@@ -80,10 +80,6 @@ class Ui_Dialog(object):
         self.label_2.setIndent(5)
         self.label_2.setObjectName("label_2")
 
-        self.setGeometry(300, 300, 300, 150)
-        self.setWindowTitle('Input Dialog')        
-        self.show()
-
         self.retranslateUi(Dialog)
         self.tabWidget.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
@@ -93,7 +89,7 @@ class Ui_Dialog(object):
 
     # The compButton method
     def showDialog(self):
-        text, ok = QInputDialog.getText(self, 'input dialog', 'Is this ok?')
+        text, ok = QInputDialog.getText(self, 'Email Input', 'Enter email?')
         if ok:
             self.le.setText(str(text))
 
