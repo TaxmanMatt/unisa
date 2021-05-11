@@ -70,6 +70,8 @@ class Ui_Dialog(object):
         self.compButton = QtWidgets.QPushButton(Dialog)
         self.compButton.setGeometry(QtCore.QRect(540, 100, 191, 23))
         self.compButton.setObjectName("compButton")
+        # Calls the method??
+        self.compButton.clicked.connect(self.showDialog)
         self.label_2 = QtWidgets.QLabel(Dialog)
         self.label_2.setGeometry(QtCore.QRect(505, 25, 261, 61))
         self.label_2.setFrameShape(QtWidgets.QFrame.NoFrame)
@@ -78,12 +80,22 @@ class Ui_Dialog(object):
         self.label_2.setIndent(5)
         self.label_2.setObjectName("label_2")
 
+        self.setGeometry(300, 300, 300, 150)
+        self.setWindowTitle('Input Dialog')        
+        self.show()
+
         self.retranslateUi(Dialog)
         self.tabWidget.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
 
         self.previousButton.clicked.connect(self.showPrevious)
         self.nextButton.clicked.connect(self.showNext)
+
+    # The compButton method
+    def showDialog(self):
+        text, ok = QInputDialog.getText(self, 'input dialog', 'Is this ok?')
+        if ok:
+            self.le.setText(str(text))
 
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
