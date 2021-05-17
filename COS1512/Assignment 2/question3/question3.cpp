@@ -2,13 +2,13 @@
 
 using namespace std;
 
-int calcAverage(int weight1, int mark1, int weight2, int mark2);
+double calcAverage(double weight1, double mark1, double weight2, double mark2);
 
 int main()
 {
     cout << calcAverage(30, 66, 70, 49);
 }
 
-int calcAverage(int weight1, int mark1, int weight2, int mark2) {
+double calcAverage(double weight1, double mark1, double weight2, double mark2) {
     return ((mark1 / 100) * weight1) + ((mark2 / 100) * weight2);
 }
