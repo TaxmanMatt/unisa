@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int calcAverage(int mark1, int mark2, int weight1, int weight2);
+int calcAverage(int weight1, int mark1, int weight2, int mark2);
 
 int main()
 {
