@@ -4,19 +4,19 @@
 using namespace std;
 
 //Conventional method.
-void calcDogsAge(int x) {
-    cout << "The conventional method: " << x * 7 << endl;
+int calcDogsAge(int x) {
+    return x * 7;
 }
 
 //Empirical method.
-void calcDogsAge(double x) {
-    cout << "The empirical method: " << 16 * log10(x) + 31 << endl;
+double calcDogsAge(double x) {
+    return 16 * log(x) + 31;
 }
 
 int main()
 {
-    calcDogsAge(5);
-    calcDogsAge(5.00);
+    cout << "Conventional: " << calcDogsAge(2) << endl;
+    cout << "Empirial: " << calcDogsAge(2.00) << endl;
 
     return 0;
 }
