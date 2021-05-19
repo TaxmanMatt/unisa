@@ -6,9 +6,9 @@ using namespace std;
 double calcAverage(double weight1, double mark1, double weight2, double mark2);
 void writeFile(string subjectCode, double average);
 
-int main()
-{
+int main() {
     ifstream inputFile("assignments.dat");
+
     string subjectCode;
     double weight1, mark1, weight2, mark2, average;
 
