@@ -3,13 +3,20 @@
 
 using namespace std;
 
-string outputText() {
+string outputFunc() {
+    string fileName;
 
+    cout << "Please enter the output file name: ";
+    cin >> fileName;
+
+    ofstream myFile(fileName.c_str());
+
+    myFile << "add all the shit into this file.";
 }
 
 int main()
 {
-    string inputFile, outputFile;
+    string inputFile;
 
     cout << "Please enter the name of the input file: ";
     cin >> inputFile;
@@ -19,10 +26,7 @@ int main()
         cin >> inputFile;
     }
 
-    cout << "Please enter the output file name: ";
-    cin >> outputFile;
-
-    //ouputText();
+    outputFunc();
 
     cout << "Thank you, your file has been converted.";
 
