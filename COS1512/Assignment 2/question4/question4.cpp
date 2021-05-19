@@ -11,6 +11,9 @@ string outputFunc() {
 
     ofstream myFile(fileName.c_str());
 
+    //open the file and start verifying
+    //ifstream yada yada
+
     myFile << "add all the shit into this file.";
 }
 
