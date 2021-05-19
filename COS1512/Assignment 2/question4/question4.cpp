@@ -14,12 +14,12 @@ string outputFunc() {
     ofstream outputFile(fileName.c_str());
 
     ifstream inputFile("activity.dat");
-    string checkEachChar;
+    char checkEachChar;
 
-    while (getline(inputFile, checkEachChar)) {
-    //while (inputFile >> checkEachChar) {
-        if (checkEachChar == "2") {
-            checkEachChar = "o";
+    //while (getline(inputFile, checkEachChar)) {
+    while (inputFile >> checkEachChar) {
+        if (checkEachChar == '2') {
+            checkEachChar = 'o';
         }
         outputFile << checkEachChar;
     }
@@ -44,3 +44,13 @@ int main()
 
     return 0;
 }
+
+/*
+//while (getline(inputFile, checkEachChar)) {
+char ReplaceCharacter() {
+    char in, replace;
+
+    while (inputFile >> checkEachChar) {
+        if (checkEachChar == '2') {
+            checkEachChar = 'o';
+*/
