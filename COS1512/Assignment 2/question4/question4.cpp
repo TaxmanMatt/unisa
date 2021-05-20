@@ -17,8 +17,8 @@ string outputFunc() {
     char checkEachChar;
 
     //while (getline(inputFile, checkEachChar)) {
-    while (inputFile >> checkEachChar) {
-        if (checkEachChar == '0') {
+    while (inputFile >> std::noskipws >> checkEachChar) {
+/*        if (checkEachChar == '0') {
             checkEachChar = 's';
         } else
         if (checkEachChar == '1') {
@@ -41,44 +41,33 @@ string outputFunc() {
         } else
         if (checkEachChar == '7') {
             checkEachChar = 'j';
-        }
-/*        switch (checkEachChar) {
-            case 0:
-                checkEachChar = 's';
-                outputFile << checkEachChar;
-                break;
-            case 1:
-                checkEachChar = 'g';
-                outputFile << checkEachChar;
-                break;
-            case 2:
-                checkEachChar = 'o';
-                outputFile << checkEachChar;
-                break;
-            case 3:
-                checkEachChar = 'y';
-                outputFile << checkEachChar;
-                break;
-            case 4:
-                checkEachChar = 'v';
-                outputFile << checkEachChar;
-                break;
-            case 5:
-                checkEachChar = 'n';
-                outputFile << checkEachChar;
-                break;
-            case 6:
-                checkEachChar = 'f';
-                outputFile << checkEachChar;
-                break;
-            case 7:
-                checkEachChar = 'j';
-                outputFile << checkEachChar;
-                break;
-            default:
-                outputFile << checkEachChar;
-                break;
         }*/
+        switch (checkEachChar) {
+            case '0':
+                checkEachChar = 's';
+                break;
+            case '1':
+                checkEachChar = 'g';
+                break;
+            case '2':
+                checkEachChar = 'o';
+                break;
+            case '3':
+                checkEachChar = 'y';
+                break;
+            case '4':
+                checkEachChar = 'v';
+                break;
+            case '5':
+                checkEachChar = 'n';
+                break;
+            case '6':
+                checkEachChar = 'f';
+                break;
+            case '7':
+                checkEachChar = 'j';
+                break;
+        }
         outputFile << checkEachChar;
     }
 }
