@@ -16,32 +16,9 @@ string outputFunc() {
     ifstream inputFile("activity.dat");
     char checkEachChar;
 
-    //while (getline(inputFile, checkEachChar)) {
+    // Checks each char and feeds it into a variable and converts
+    // it to the desired char.
     while (inputFile >> std::noskipws >> checkEachChar) {
-/*        if (checkEachChar == '0') {
-            checkEachChar = 's';
-        } else
-        if (checkEachChar == '1') {
-            checkEachChar = 'g';
-        } else
-        if (checkEachChar == '2') {
-            checkEachChar = 'o';
-        } else
-        if (checkEachChar == '3') {
-            checkEachChar = 'y';
-        } else
-        if (checkEachChar == '4') {
-            checkEachChar = 'v';
-        } else
-        if (checkEachChar == '5') {
-            checkEachChar = 'n';
-        } else
-        if (checkEachChar == '6') {
-            checkEachChar = 'f';
-        } else
-        if (checkEachChar == '7') {
-            checkEachChar = 'j';
-        }*/
         switch (checkEachChar) {
             case '0':
                 checkEachChar = 's';
@@ -85,6 +62,7 @@ int main()
         cin >> inputFile;
     }
 
+    // Runs the function to convert the file.
     outputFunc();
 
     cout << "Thank you, your file has been converted.";
