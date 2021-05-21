@@ -38,6 +38,7 @@ void fullName() {
     cout << "Enter your name, middle name and surname: ";
     cin >> firstName >> middleName >> surname;
     cout << surname << ", " << firstName << " " << middleName[0] << ". ";
+
 }
 
 void noMiddleName() {
@@ -47,14 +48,27 @@ void noMiddleName() {
     cin >> firstName >> surname;
 
 
+    if (islower(surname[0])) {
+        putchar(toupper(surname[0]));
+        for (int i = 1; i < strlen(surname); i++) {
+            putchar(tolower(surname[i]));
+        }
+    } else
+        putchar(surname[0]);
+        for (int i = 1; i < strlen(surname); i++) {
+            putchar(tolower(surname[i]));
+        }
+/*
+    cout << ", ";
+
     if (islower(firstName[0])) {
         putchar(toupper(firstName[0]));
         for (int i = 1; i < strlen(firstName); i++) {
-                putchar(tolower(firstName[i]));
+            putchar(tolower(firstName[i]));
         }
     } else
         putchar(firstName[0]);
         for (int i = 1; i < strlen(firstName); i++) {
             putchar(tolower(firstName[i]));
-        }
+        }*/
 }
