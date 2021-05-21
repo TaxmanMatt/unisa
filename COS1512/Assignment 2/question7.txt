@@ -1,0 +1,48 @@
+Question 7
+
+a) It's the memory address of a variable.
+
+b) Produces the variable that it points to.
+
+c) p1 = p2; assigns the value of one pointer variable to another.
+   *p1 = *p2; assigns the value of the pointer itself to another.
+
+d) Is an undefined pointer variable.
+
+e) A variable that once used, it's memory space is returned for use by another.
+
+f) It produces a new variable and returns a pointer that points to this variable.
+
+g) It deletes a dynamic variable and returns the memory that the dynamic variable occupied to the freestore.
+
+h) It's the part of a computers memory that's assigned for use by dynamic variables.
+
+i) Automatic variables are the normal variables we declare in our functions.
+
+j) It's an array whose size is determined when the program is running.
+
+k) They are more efficient with their memory use.
+
+l) An array name is essentially a pointer.
+
+m) int* p1, p2; assigns only p1 as the pointer variable whereas the latter ensures both p1 and p2 are assigned as pointer variables.
+
+n) 
+i- typedef double* DoublePtr;
+   DoublePtr fPtr1, fPtr2;
+
+ii- DoublePtr *p;
+    p = new DoublePtr;
+
+iii- *fPtr1 = *fPtr2;
+
+iv- cout << p;
+
+v- cout << *p;
+
+vi- delete p;
+
+vii- p = NULL;
+
+o)
+   
