@@ -6,9 +6,9 @@ using namespace std;
 void fullName();
 void noMiddleName();
 
-
 int main()
 {
+    // Check if user has a middle name.
     while(true) {
         char choice;
         cout << "Do you have a middle name? Enter y or n: ";
@@ -37,8 +37,41 @@ void fullName() {
 
     cout << "Enter your name, middle name and surname: ";
     cin >> firstName >> middleName >> surname;
-    cout << surname << ", " << firstName << " " << middleName[0] << ". ";
 
+    // Check if surname is lower case.
+    if (islower(surname[0])) {
+        putchar(toupper(surname[0]));
+        for (int i = 1; i < strlen(surname); i++) {
+            putchar(tolower(surname[i]));
+        }
+    } else {
+        putchar(surname[0]);
+        for (int i = 1; i < strlen(surname); i++) {
+            putchar(tolower(surname[i]));
+        }
+    }
+
+    cout << ", ";
+
+    // Check if first name is lower case.
+    if (islower(firstName[0])) {
+        putchar(toupper(firstName[0]));
+        for (int i = 1; i < strlen(firstName); i++) {
+            putchar(tolower(firstName[i]));
+        }
+    } else {
+        putchar(firstName[0]);
+        for (int i = 1; i < strlen(firstName); i++) {
+            putchar(tolower(firstName[i]));
+        }
+    }
+
+    // Check if middle name starts with lower case letter.
+    if (islower(middleName[0])) {
+        cout << " ";
+        putchar(toupper(middleName[0]));
+        cout << ". ";
+    }
 }
 
 void noMiddleName() {
@@ -47,28 +80,31 @@ void noMiddleName() {
     cout << "Enter your name and surname: ";
     cin >> firstName >> surname;
 
-
+    // Check if surname is lower case.
     if (islower(surname[0])) {
         putchar(toupper(surname[0]));
         for (int i = 1; i < strlen(surname); i++) {
             putchar(tolower(surname[i]));
         }
-    } else
+    } else {
         putchar(surname[0]);
         for (int i = 1; i < strlen(surname); i++) {
             putchar(tolower(surname[i]));
         }
-/*
+    }
+
     cout << ", ";
 
+    // Check if first name is lower case.
     if (islower(firstName[0])) {
         putchar(toupper(firstName[0]));
         for (int i = 1; i < strlen(firstName); i++) {
             putchar(tolower(firstName[i]));
         }
-    } else
+    } else {
         putchar(firstName[0]);
         for (int i = 1; i < strlen(firstName); i++) {
             putchar(tolower(firstName[i]));
-        }*/
+        }
+    }
 }
