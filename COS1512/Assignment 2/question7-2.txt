@@ -19,18 +19,18 @@ i) Dynamic variables are created while the program is running while automatic va
 
 j) A dynamic array is an array with an unspecified size when initially writing the array.
 
-k) Dynamic arrays are more considerate in terms of memory use. 
+k) Dynamic arrays are more considerate in terms of memory use.
 
 l) When assigning a pointer to an array, the pointer essentially becomes the array.
 
 m) int* p1, p2; only assigns p1 as the pointer variable and p2 a normal variable whereas the latter assigns both p1 and p2 as pointer variables.
 
-n) 
+n)
 i) typedef double DoublePtr;
    DoublePtr fPtr1, fPtr1;
 
 ii) double *p;
-    p = fPtr1; 
+    p = fPtr1;
 
 iii)  *fPtr1 = *fPtr2;
 
@@ -44,5 +44,34 @@ vii) DoublePtr = NULL;
 
 o)
 
-p) 
+#include <iostream>
+#include <cstddef>
 
+using namespace std;
+
+int main()
+{
+    cout << "Enter size of array: ";
+    size_t length{};
+    cin >> length;
+
+    int *array{ new int[length]{} };
+    cout << "Array of integers of length " << length << " allocated."<< endl;
+
+    // Loop to request integer for each element.
+    for (int i = 0; i < length; i++) {
+        cout << "Please enter your integer: ";
+        cin >> array[i];
+    }
+
+    // TODO Loop through array for largest integer.
+    for (int i = 0; i < length; i++) {
+        //check for largest.
+    }
+
+    delete[] array;
+
+    return 0;
+}
+
+p)

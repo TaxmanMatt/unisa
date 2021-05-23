@@ -27,7 +27,7 @@ l) An array name is essentially a pointer.
 
 m) int* p1, p2; assigns only p1 as the pointer variable whereas the latter ensures both p1 and p2 are assigned as pointer variables.
 
-n) 
+n)
 i- typedef double* DoublePtr;
    DoublePtr fPtr1, fPtr2;
 
@@ -45,4 +45,33 @@ vi- delete p;
 vii- p = NULL;
 
 o)
-   
+
+#include <iostream>
+#include <cstddef>
+
+using namespace std;
+
+int main()
+{
+    cout << "Enter size of array: ";
+    size_t length{};
+    cin >> length;
+
+    int *array{ new int[length]{} };
+    cout << "Array of integers of length " << length << " allocated."<< endl;
+
+    // Loop to request integer for each element.
+    for (int i = 0; i < length; i++) {
+        cout << "Please enter your integer: ";
+        cin >> array[i];
+    }
+
+    // TODO Loop through array for largest integer.
+    for (int i = 0; i < length; i++) {
+        //check for largest.
+    }
+
+    delete[] array;
+
+    return 0;
+}
